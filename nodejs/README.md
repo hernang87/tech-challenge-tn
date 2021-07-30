@@ -19,7 +19,7 @@ para isso vamos utilizar algumas API's disponíveis nesse repositório.
 
 4. Recebíveis do merchant (payables), devem possuir as seguintes regras de negócio:
     * Transação **Debit card**:
-      * O payable deve ser criado com **status = paid**, indicando que o merchan
+      * O payable deve ser criado com **status = paid**, indicando que o merchant irá receber o valor
       * O payable deve ser criado com a data igual a data de criação (D + 0).
 
     * Transação **Credit card**:
