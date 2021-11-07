@@ -123,14 +123,14 @@ docker-compose up
 ```
 
 ## Transactions
-Listado de `transactions` registradas
+Listar `transactions` registradas
 `GET http://0.0.0.0:8080/transactions`
 
 Obtener una `transaction` específica
 `GET http://0.0.0.0:8080/transactions/:id`
 
-Creación de `transactions`
+Crear `transactions`
 `POST http://0.0.0.0:8080/transactions`
 
-Eliminación de `transaction` por ID
+Eliminar `transaction` por ID
 `DELETE http://0.0.0.0:8080/transactions/:id`
