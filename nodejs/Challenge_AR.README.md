@@ -121,3 +121,16 @@ El requisito es tener Docker en su máquina para ejecutar nuestra API simulada:
 ```
 docker-compose up
 ```
+
+## Transactions
+Listado de `transactions` registradas
+`GET http://0.0.0.0:8080/transactions`
+
+Obtener una `transaction` específica
+`GET http://0.0.0.0:8080/transactions/:id`
+
+Creación de `transactions`
+`POST http://0.0.0.0:8080/transactions`
+
+Eliminación de `transaction` por ID
+`DELETE http://0.0.0.0:8080/transactions/:id`
