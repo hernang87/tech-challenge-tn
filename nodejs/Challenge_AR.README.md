@@ -2,7 +2,7 @@
 Your challenge is to build a new **API's** to manage payments transactions of our merchants. 
 
 ## Functional requirements
-We need an endpoint that calculates the merchant's total Payables per period, the response should contain:
+We need an endpoint that calculates the merchant's total Payables by period, the response should contain:
 - Total amount of receivables
 - Amount receivable for the future
 - Total cobrado de taxa
