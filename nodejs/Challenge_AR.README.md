@@ -2,11 +2,10 @@
 Your challenge is to build a new **API's** to manage payments transactions of our merchants. 
 
 ## Functional requirements
-We need to create a new API to manage payments transactions applying a fee of our merchants. That been said, we need:
-- Create models for: payments transactions, fees.
-- Endpoint to create and list all payment transactions for a given merchant.
-- Filter and sum payments transactions and fees by a period.
-- Save and return only the last 4 digits of the card.
+We need an endpoint that calculates the merchant's total Payables per period, the response should contain:
+- Total amount of receivables
+- Amount receivable for the future
+- Total cobrado de taxa
 
 ## Considerations
 1. Endpoints to process payments transactions and return the list of all transactions created for a given merchant. 
@@ -24,7 +23,6 @@ We need to create a new API to manage payments transactions applying a fee of ou
       * The payable must be created with **status = waiting_funds**, indicating that the merchant will receive this amount in the future.
       * The payable must be created with the payment date equal to the date of creation of the transaction + 30 days (D + 30).
 5. When the payables are created, the processing fee must be discounted. Consider 2% of fee for **debit card** transactions and 4% for **credit card** transactions. Example: when a merchant processes $ 100,00 from a credit card transaction, he will receive $ 96,00. 
-6. We also need an endpoint that returns the total receivable (payables) from all merchants by a period and an endpoint that returns the total fee by a period.
 
 ## Technical requirements
   * RESTFul API with NodeJS
