@@ -38,7 +38,7 @@ We need an endpoint that calculates the merchant's total Payables by period, the
   * Technically explain requirements that weren’t completed on time.
   * Use the Json Server to persist transaction information
 
-# Instalación
+# Installation
 Requirement is to have docker on your machine to run our mock API:
 
 ```
