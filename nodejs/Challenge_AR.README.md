@@ -5,7 +5,7 @@ Your challenge is to build a new **API's** to manage payments transactions of ou
 We need an endpoint that calculates the merchant's total Payables by period, the response should contain:
 - Total amount of receivables
 - Amount receivable for the future
-- Total cobrado de taxa
+- Total fee charged
 
 ## Considerations
 1. Endpoints to process payments transactions and return the list of all transactions created for a given merchant. 
