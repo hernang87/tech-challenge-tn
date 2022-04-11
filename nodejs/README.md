@@ -38,7 +38,7 @@ e **4%** para transações **credit_card**. Exemplo: Quando um payable é criado
 Não utilizaremos banco de dados nesta aplicação. Todas as informações deverão ser armazenadas na **Mock API** que está no docker deste projeto. Você consumirá os endpoints do container como microsserviços
 
 ## Extra
-- Você pode utilizar qualquer linguagem de programação, frameworks e biblioteca
+- Você pode utilizar qualquer linguagem de programação (recomendamos que utilize a que você possui maior familiaridade), frameworks e biblioteca
 - É um diferencial que pelo menos a lógica principal seja testada
 - É um diferencial trabalhar com Typescript no dia a dia
 
