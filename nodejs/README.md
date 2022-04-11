@@ -40,7 +40,6 @@ Não utilizaremos banco de dados nesta aplicação. Todas as informações dever
 ## Extra
 - Você pode utilizar qualquer linguagem de programação (recomendamos que utilize a que você possui maior familiaridade), frameworks e biblioteca
 - É um diferencial que pelo menos a lógica principal seja testada
-- É um diferencial trabalhar com Typescript no dia a dia
 
 
 
