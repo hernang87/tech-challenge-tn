@@ -71,7 +71,7 @@ Remoção de `transaction` por ID
 Listagem de `payables` registradas
 `GET http://0.0.0.0:8080/payables`
 
-Carregamento de uma `payable` específica
+Carregamento de um `payable` específica
 `GET http://0.0.0.0:8080/payables/:id`
 
 Criação de `payables`
