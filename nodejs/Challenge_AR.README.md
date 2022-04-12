@@ -64,7 +64,7 @@ Creation of `transactions` `POST http://0.0.0.0:8080/transactions`
 ## Payables
 List of registered `payables` `GET http://0.0.0.0:8080/payables`
 
-Loading a `payable` specific `GET http://0.0.0.0:8080/payables/:id`
+Loading a specific `payable` `GET http://0.0.0.0:8080/payables/:id`
 
 Creating `payables` POST `http://0.0.0.0:8080/payables`
 
