@@ -14,7 +14,7 @@
   "payables": [
     {
       "id": "1",
-      "status": "payd",
+      "status": "paid",
       "create_date": "15//03/2020",
       "subtotal": "200",
       "discount": "4",

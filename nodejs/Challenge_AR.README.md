@@ -64,8 +64,8 @@ Creation of `transactions` `POST http://0.0.0.0:8080/transactions`
 ## Payables
 List of registered `payables` `GET http://0.0.0.0:8080/payables`
 
-Loading a `transaction` specific `GET http://0.0.0.0:8080/payables/:id`
+Loading a `payable` specific `GET http://0.0.0.0:8080/payables/:id`
 
 Creating `payables` POST `http://0.0.0.0:8080/payables`
 
-`Transaction` removal by ID `DELETE http://0.0.0.0:8080/payables/:id`
+`Payable` removal by ID `DELETE http://0.0.0.0:8080/payables/:id`
