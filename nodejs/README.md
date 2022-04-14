@@ -4,7 +4,7 @@ para isso vamos utilizar algumas API's disponíveis nesse repositório.
 
 ## Nós precisamos que você implemente:
 
-1. Um endpoint para processar transações de um determinado merchant (vendedor)
+1. Um endpoint para processar transações e pagamentos de um determinado merchant (vendedor)
   * Uma transação deve conter pelo menos:
   	* O valor total da transação, formatado em string decimal
   	* Descrição da transação, por exemplo "T-Shirt Black M"
@@ -26,9 +26,7 @@ para isso vamos utilizar algumas API's disponíveis nesse repositório.
   * Ao criar payables, devemos descontar uma taxa de processamento (chamada de `fee`). Considere **2%** para transações **debit_card**
 e **4%** para transações **credit_card**. Exemplo: Quando um payable é criado no valor de R$ 100,00 a partir de uma transação **credit_card**  ele receberá R$ 96,00.
 
-2. Um endpoint que retorne uma lista de todas as transações por merchant
-
-3. Um endpoint que calcule o total de Recebíveis (payables) do merchant por período, a resposta deve conter:
+2. Um endpoint que calcule o total de Recebíveis (payables) do merchant por período, a resposta deve conter:
   * Valor total de recebíveis
   * Valor a receber para o futuro
   * Total cobrado de taxa 
