@@ -28,7 +28,7 @@ para isso vamos utilizar algumas API's disponíveis nesse repositório.
 e **4%** para transações **credit_card**. Exemplo: Quando um payable é criado no valor de R$ 100,00 a partir de uma transação **credit_card**  ele receberá R$ 96,00.
 
 2. Um endpoint que calcule o total de Recebíveis (payables) do merchant por período, a resposta deve conter:
-  * Valor total de recebíveis
+  * Valor total de recebíveis pagos
   * Valor a receber para o futuro
   * Total cobrado de taxa 
 
@@ -109,7 +109,7 @@ para eso vamos a usar algunas API's que están disponibles en ese repositorio.
 y **4%** para transacciones **credit_card**. Ejemplo: Cuando un payable es creado con un valor de ARS 100,00 a partir de una transacción **credit_card**  él recibirá ARS 96,00.
 
 2. Un endpoint que calcule el total de cuentas por cobrar (payables) del merchant por período, la respuesta debe contener:
-  * Valor total de cuentas por cobrar
+  * Valor total de cuentas por cobrar pagos
   * Valor de futuros ingresos
   * Total cobrado de tasas 
 
