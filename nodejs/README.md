@@ -29,8 +29,8 @@ e **4%** para transações **credit_card**. Exemplo: Quando um payable é criado
 
 2. Um endpoint que calcule o total de Recebíveis (payables) do merchant por período, a resposta deve conter:
   * Valor total de recebíveis pagos
+  * Total cobrado de taxa nos recebíveis pagos
   * Valor a receber para o futuro
-  * Total cobrado de taxa 
 
 ## Importante
 Não utilizaremos banco de dados nesta aplicação. Todas as informações deverão ser armazenadas na **Mock API** que está no docker deste projeto. Você consumirá os endpoints do container como microsserviços
@@ -110,8 +110,9 @@ y **4%** para transacciones **credit_card**. Ejemplo: Cuando un payable es cread
 
 2. Un endpoint que calcule el total de cuentas por cobrar (payables) del merchant por período, la respuesta debe contener:
   * Valor total pago de cuentas por cobrar
+  * Total cobrado de tasas en los pagos
   * Valor de futuros ingresos
-  * Total cobrado de tasas 
+  
 
 ## Importante
 No utilizaremos base de datos en esa aplicación. Todas la información deberán ser grabadas en la **Mock API** que está en el docker de este proyecto. Vas a consumir los endpoints del container como microservicios.
