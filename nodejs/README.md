@@ -109,7 +109,7 @@ para eso vamos a usar algunas API's que están disponibles en ese repositorio.
 y **4%** para transacciones **credit_card**. Ejemplo: Cuando un payable es creado con un valor de ARS 100,00 a partir de una transacción **credit_card**  él recibirá ARS 96,00.
 
 2. Un endpoint que calcule el total de cuentas por cobrar (payables) del merchant por período, la respuesta debe contener:
-  * Valor total de cuentas por cobrar pagos
+  * Valor total pago de cuentas por cobrar
   * Valor de futuros ingresos
   * Total cobrado de tasas 
 
