@@ -101,7 +101,7 @@ para eso vamos a usar algunas API's que están disponibles en ese repositorio.
       * El payable debe ser creado con **status = paid**, indicando que el merchant recebirá el valor
       * El payable debe ser creado con la fecha igual a la fecha de creación (D + 0).
 
-  * Transação **Credit card**:
+  * Transacción **Credit card**:
       * El payable debe ser creado con  **status = waiting_funds**, indicando que el merchant irá recibir ese valor en el futuro
       * El payable debe ser creado con la fecha igual a la fecha de creación + 30 días (D + 30)
 
@@ -115,7 +115,7 @@ y **4%** para transacciones **credit_card**. Ejemplo: Cuando un payable es cread
   
 
 ## Importante
-No utilizaremos base de datos en esa aplicación. Todas la información deberán ser grabadas en la **Mock API** que está en el docker de este proyecto. Vas a consumir los endpoints del container como microservicios.
+No utilizaremos base de datos en esa aplicación. Toda la información deberán ser grabadas en la **Mock API** que está en el docker de este proyecto. Vas a consumir los endpoints del container como microservicios.
 
 ## Extra
 - Podrás usar cualquier lenguage de programación (te recomendamos que utilizes el que mejor manejás), frameworks e librerías.
