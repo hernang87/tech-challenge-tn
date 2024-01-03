@@ -1,43 +1,66 @@
 const axios = require("axios");
 const processTransaction = require("./process-transaction");
+const createPayables = require("../../payables/create");
 
 jest.mock("axios");
+jest.mock("../../payables/create");
+
+const anyResponse = {};
 
 describe("processTransaction", () => {
-  it("should process a transaction and create payables", async () => {
-    const req = {
+  let req;
+  let res;
+  let transaction;
+  let lastFourDigits = "0126";
+
+  beforeEach(() => {
+    req = {
       body: {
-        /* mock request body */
+        cardCvv: "290",
+        cardExpirationDate: "04/28",
+        cardHolderName: "Fonsi Julian",
+        cardNumber: "374245455400126",
+        description: "T-Shirt Black/M",
+        method: "debit_card",
+        value: "340.30",
       },
     };
-    const res = {
-      /* mock response object */
+
+    res = {
+      send: jest.fn(),
+      status: jest.fn(() => res),
     };
 
+    transaction = req.body;
+  });
+
+  it("should process a transaction", async () => {
     // Mock the axios post request
     axios.post.mockResolvedValueOnce({
-      /* mock response from external API */
+      data: {
+        ...transaction,
+        id: "any_id",
+        cardNumber: lastFourDigits,
+      },
     });
 
-    // Mock the createPayables function
-    const createPayablesMock = jest.spyOn(createPayables, "createPayables");
-    createPayablesMock.mockResolvedValueOnce({
-      /* mock response from createPayables */
-    });
+    createPayables.mockResolvedValueOnce(anyResponse);
 
-    // Call the processTransaction function
     await processTransaction(req, res);
 
-    // Assert that the axios post request was called with the correct data
-    expect(axios.post).toHaveBeenCalledWith(/* expected post data */);
+    expect(axios.post).toHaveBeenCalledWith(process.env.TRANSACTIONS, {
+      ...transaction,
+      cardNumber: req.body.cardNumber.slice(-4),
+      value: Number(req.body.value).toFixed(2),
+    });
 
-    // Assert that the createPayables function was called with the correct data
-    expect(
-      createPayablesMock
-    ).toHaveBeenCalledWith(/* expected createPayables data */);
+    expect(createPayables).toHaveBeenCalledWith(req.body);
 
-    // Assert that the response was sent with the correct data
-    expect(res.status).toHaveBeenCalledWith(/* expected status code */);
-    expect(res.json).toHaveBeenCalledWith(/* expected response data */);
+    expect(res.send).toHaveBeenCalledWith({
+      ...req.body,
+      id: "any_id",
+      cardNumber: req.body.cardNumber.slice(-4),
+      value: Number(req.body.value).toFixed(2),
+    });
   });
 });
