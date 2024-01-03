@@ -11,15 +11,13 @@ async function createPayables(transaction) {
 
   const total = payable.getTotal();
 
-  const result = await axios.post(process.env.PAYABLES, {
+  return await axios.post(process.env.PAYABLES, {
     create_date: payable.createDate,
     discount: (Number(transaction.value) - total).toFixed(2),
     status: payable.status,
     subtotal: transaction.value,
     total: total.toFixed(2),
   });
-
-  console.log({ result });
 }
 
 module.exports = createPayables;
