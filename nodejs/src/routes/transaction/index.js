@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const processTransaction = require("./process");
+const process = require("./process");
+const validate = require("./validate");
 
-router.post("/", processTransaction);
+router.post("/", validate, process);
 
 module.exports = router;
