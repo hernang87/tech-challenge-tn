@@ -149,7 +149,7 @@
     {
       "create_date": "03/01/2024",
       "discount": "333.49",
-      "status": "waiting_funds",
+      "status": "paid",
       "subtotal": "340.30",
       "total": "6.81",
       "id": "gkk5zwr"
