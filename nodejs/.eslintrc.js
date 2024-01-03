@@ -2,6 +2,7 @@ module.exports = {
   env: {
     commonjs: true,
     node: true,
+    "jest/globals": true,
   },
   extends: "eslint:recommended",
   overrides: [
