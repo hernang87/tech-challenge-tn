@@ -5,7 +5,7 @@ const createPayables = require("../../payables/create");
 jest.mock("axios");
 jest.mock("../../payables/create");
 
-const anyResponse = {};
+const any = {};
 
 describe("processTransaction", () => {
   let req;
@@ -19,7 +19,7 @@ describe("processTransaction", () => {
         cardCvv: "290",
         cardExpirationDate: "04/28",
         cardHolderName: "Fonsi Julian",
-        cardNumber: "374245455400126",
+        cardNumber: `37424545540${lastFourDigits}`,
         description: "T-Shirt Black/M",
         method: "debit_card",
         value: "340.30",
@@ -35,7 +35,8 @@ describe("processTransaction", () => {
   });
 
   it("should process a transaction", async () => {
-    // Mock the axios post request
+    const expectedValue = Number(transaction.value).toFixed(2);
+
     axios.post.mockResolvedValueOnce({
       data: {
         ...transaction,
@@ -44,23 +45,47 @@ describe("processTransaction", () => {
       },
     });
 
-    createPayables.mockResolvedValueOnce(anyResponse);
+    createPayables.mockResolvedValueOnce(any);
 
     await processTransaction(req, res);
 
     expect(axios.post).toHaveBeenCalledWith(process.env.TRANSACTIONS, {
       ...transaction,
-      cardNumber: req.body.cardNumber.slice(-4),
-      value: Number(req.body.value).toFixed(2),
+      cardNumber: lastFourDigits,
+      value: expectedValue,
     });
-
-    expect(createPayables).toHaveBeenCalledWith(req.body);
 
     expect(res.send).toHaveBeenCalledWith({
-      ...req.body,
+      ...transaction,
       id: "any_id",
-      cardNumber: req.body.cardNumber.slice(-4),
-      value: Number(req.body.value).toFixed(2),
+      cardNumber: lastFourDigits,
+      value: expectedValue,
     });
+  });
+
+  it("tries to create payables", async () => {
+    axios.post.mockResolvedValueOnce({
+      data: {
+        ...transaction,
+        id: "any_id",
+        cardNumber: lastFourDigits,
+      },
+    });
+
+    createPayables.mockResolvedValueOnce(any);
+
+    await processTransaction(req, res);
+
+    expect(createPayables).toHaveBeenCalledWith(transaction);
+  });
+
+  it("should return an error if the payables creation fails", async () => {
+    const error = new Error("any_error");
+    createPayables.mockRejectedValueOnce(error);
+
+    await processTransaction(req, res).then();
+
+    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.send).toHaveBeenCalledWith({ error: error.message });
   });
 });
