@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const getWaitingFundsTotals = require("./get-waiting-funds-totals");
+const getPayables = require("./get-payables");
 
-router.get("/waiting-funds", getWaitingFundsTotals);
+router.get("/", getPayables);
 
 module.exports = router;

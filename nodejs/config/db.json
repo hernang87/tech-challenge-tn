@@ -11,114 +11,54 @@
       "id": "KiV2szQ"
     },
     {
-      "value": "340.30",
+      "value": "200.00",
       "description": "T-Shirt Black/M",
       "method": "credit_card",
       "cardNumber": "0126",
       "cardHolderName": "Fonsi Julian",
       "cardExpirationDate": "04/28",
       "cardCvv": "290",
-      "id": "d43cefad"
+      "id": "sy2y_1e"
     },
     {
-      "value": "340.30",
+      "value": "200.00",
       "description": "T-Shirt Black/M",
       "method": "credit_card",
       "cardNumber": "0126",
       "cardHolderName": "Fonsi Julian",
       "cardExpirationDate": "04/28",
       "cardCvv": "290",
-      "id": "uEVzSMD"
+      "id": "t6aab6u"
     },
     {
-      "value": "340.30",
-      "description": "T-Shirt Black/M",
-      "method": "credit_card",
-      "cardNumber": "0126",
-      "cardHolderName": "Fonsi Julian",
-      "cardExpirationDate": "04/28",
-      "cardCvv": "290",
-      "id": "OrMLmsT"
-    },
-    {
-      "value": "340.30",
-      "description": "T-Shirt Black/M",
-      "method": "credit_card",
-      "cardNumber": "0126",
-      "cardHolderName": "Fonsi Julian",
-      "cardExpirationDate": "04/28",
-      "cardCvv": "290",
-      "id": "mfmaB9O"
-    },
-    {
-      "value": "340.30",
-      "description": "T-Shirt Black/M",
-      "method": "credit_card",
-      "cardNumber": "0126",
-      "cardHolderName": "Fonsi Julian",
-      "cardExpirationDate": "04/28",
-      "cardCvv": "290",
-      "id": "Kav9jsp"
-    },
-    {
-      "value": "340.30",
-      "description": "T-Shirt Black/M",
-      "method": "credit_card",
-      "cardNumber": "0126",
-      "cardHolderName": "Fonsi Julian",
-      "cardExpirationDate": "04/28",
-      "cardCvv": "290",
-      "id": "39UJCNU"
-    },
-    {
-      "value": "340.30",
-      "description": "T-Shirt Black/M",
-      "method": "credit_card",
-      "cardNumber": "0126",
-      "cardHolderName": "Fonsi Julian",
-      "cardExpirationDate": "04/28",
-      "cardCvv": "290",
-      "id": "ULh3YA-"
-    },
-    {
-      "value": "340.30",
-      "description": "T-Shirt Black/M",
-      "method": "credit_card",
-      "cardNumber": "0126",
-      "cardHolderName": "Fonsi Julian",
-      "cardExpirationDate": "04/28",
-      "cardCvv": "290",
-      "id": "pCOLPmI"
-    },
-    {
-      "value": "340.30",
-      "description": "T-Shirt Black/M",
-      "method": "credit_card",
-      "cardNumber": "0126",
-      "cardHolderName": "Fonsi Julian",
-      "cardExpirationDate": "04/28",
-      "cardCvv": "290",
-      "id": "urb0OqM"
-    },
-    {
-      "value": "340.30",
+      "value": "100.00",
       "description": "T-Shirt Black/M",
       "method": "debit_card",
       "cardNumber": "0126",
       "cardHolderName": "Fonsi Julian",
       "cardExpirationDate": "04/28",
       "cardCvv": "290",
-      "id": "FR0Iiuo"
+      "id": "MU5GWJn"
     },
     {
-      "value": "340.30",
+      "value": "100.00",
       "description": "T-Shirt Black/M",
-      "method": "credit_card",
+      "method": "debit_card",
       "cardNumber": "0126",
       "cardHolderName": "Fonsi Julian",
       "cardExpirationDate": "04/28",
       "cardCvv": "290",
-      "id": "XO-OI_9"
+      "id": "tt3rV0X"
+    },
+    {
+      "value": "100.00",
+      "description": "T-Shirt Black/M",
+      "method": "debit_card",
+      "cardNumber": "0126",
+      "cardHolderName": "Fonsi Julian",
+      "cardExpirationDate": "04/28",
+      "cardCvv": "290",
+      "id": "OJtLRZu"
     }
   ],
   "payables": [
@@ -139,28 +79,44 @@
       "total": "98"
     },
     {
-      "id": "3",
+      "create_date": "03/02/2024",
+      "discount": "8.00",
       "status": "waiting_funds",
-      "create_date": "15/03/2020",
-      "subtotal": "100",
-      "discount": "2",
-      "total": "98"
+      "subtotal": "200",
+      "total": "192.00",
+      "id": "7sleoC0"
     },
     {
-      "create_date": "03/01/2024",
-      "discount": "333.49",
+      "create_date": "03/02/2024",
+      "discount": "8.00",
+      "status": "waiting_funds",
+      "subtotal": "200",
+      "total": "192.00",
+      "id": "BEAdbgp"
+    },
+    {
+      "create_date": "04/01/2024",
+      "discount": "2.00",
       "status": "paid",
-      "subtotal": "340.30",
-      "total": "6.81",
-      "id": "gkk5zwr"
+      "subtotal": "100",
+      "total": "98.00",
+      "id": "be_DL-l"
     },
     {
-      "create_date": "02/02/2024",
-      "discount": "326.69",
-      "status": "waiting_funds",
-      "subtotal": "340.30",
-      "total": "13.61",
-      "id": "6xShUCx"
+      "create_date": "04/01/2024",
+      "discount": "2.00",
+      "status": "paid",
+      "subtotal": "100",
+      "total": "98.00",
+      "id": "NhX6NDb"
+    },
+    {
+      "create_date": "04/01/2024",
+      "discount": "2.00",
+      "status": "paid",
+      "subtotal": "100",
+      "total": "98.00",
+      "id": "m2U8YoV"
     }
   ]
 }
