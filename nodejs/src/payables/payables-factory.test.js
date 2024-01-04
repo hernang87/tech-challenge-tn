@@ -27,6 +27,11 @@ describe("PayablesFactory", () => {
     expect(payable.getTotal()).toEqual(333.2);
   });
 
+  it("marks as paid when using a debit card", () => {
+    const payable = PayablesFactory.create(transaction);
+    expect(payable.status).toEqual("paid");
+  });
+
   it("should return a new instance of CreditCardPayable", () => {
     transaction.method = "credit_card";
     const payable = PayablesFactory.create(transaction);
@@ -37,6 +42,12 @@ describe("PayablesFactory", () => {
     transaction.method = "credit_card";
     const payable = PayablesFactory.create(transaction);
     expect(payable.getTotal()).toEqual(326.4);
+  });
+
+  it("marks as waiting funds when using a debit card", () => {
+    transaction.method = "credit_card";
+    const payable = PayablesFactory.create(transaction);
+    expect(payable.status).toEqual("waiting_funds");
   });
 
   it("should throw an error if the method is not implemented", () => {
