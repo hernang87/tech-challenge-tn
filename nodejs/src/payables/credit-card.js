@@ -9,7 +9,7 @@ class CreditCardPayable {
   }
 
   getTotal() {
-    return Number(this.transaction.value) * this.fee;
+    return Number(this.transaction.value) * (1 - this.fee);
   }
 }
 
