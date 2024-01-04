@@ -1,18 +1,22 @@
 const axios = require("axios");
 const moment = require("moment");
 
-async function getPayables(req, res) {
+async function getPayables(_, res) {
   let response;
   try {
     response = await axios.get(process.env.PAYABLES);
   } catch (error) {
-    console.error(error);
     res.status(500).send({ error: error.message });
     return;
   }
 
-  if (!response) {
-    res.status(500).send({ error: "No payables found" });
+  if (!response || !response.data || !response.data.length) {
+    const zero = Number(0).toFixed(2);
+    res.status(200).send({
+      feesTotal: zero,
+      paidTotal: zero,
+      waitingFundsTotal: zero,
+    });
     return;
   }
 
